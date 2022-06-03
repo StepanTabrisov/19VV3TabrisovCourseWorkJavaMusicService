@@ -1,0 +1,44 @@
+.scroll-pane .corner{
+    -fx-background-color :  #080021 ;
+}
+
+.scroll-pane{
+    -fx-background-color :  #080021 ;
+}
+
+.scroll-bar:vertical .track{
+     -fx-background-color :  #080021 ;
+     -fx-padding :0.0 10.0 0.0 20.0;
+}
+
+.scroll-bar:vertical .thumb:pressed{
+     -fx-background-color : #696772 ;
+     -fx-padding :0.0 10.0 0.0 0.0;
+}
+
+.scroll-bar:vertical .thumb : disabled {
+     -fx-background-color : #080021 ;
+
+}
+
+.scroll-bar:vertical .thumb{
+      -fx-background-radius : 35;
+      -fx-background-color :  #1E1C2C ;
+      -fx-background-insets: 5, 0, 0;
+      -fx-padding :0.0 10.0 0.0 20.0;
+}
+
+.scroll-bar:vertical .increment-arrow,
+ .scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+    visibility: hidden;
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+    visibility: hidden;
+}

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="673.0" style="-fx-background-color: #080021;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.alfa.MainController">
+   <children>
+      <VBox blendMode="LIGHTEN" layoutX="-3.0" layoutY="-5.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="174.0" spacing="2.0" style="-fx-background-color: #003060;" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="-3.0" AnchorPane.topAnchor="-5.0">
+         <children>
+            <Pane prefHeight="82.0" prefWidth="170.0" />
+            <Button fx:id="mainBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#setMain" prefHeight="43.0" prefWidth="173.0" stylesheets="@style.css" text="Главная" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="35.0" />
+               </padding></Button>
+            <Button fx:id="searchBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#setSearch" prefHeight="42.0" prefWidth="175.0" stylesheets="@style.css" text="Поиск" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="35.0" />
+               </padding></Button>
+            <Button fx:id="collectBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#setCollect" prefHeight="43.0" prefWidth="176.0" stylesheets="@style.css" text="Ваша коллекция" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="35.0" />
+               </padding></Button>
+            <Button fx:id="exitBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#goToLogin" prefHeight="43.0" prefWidth="176.0" stylesheets="@style.css" text="Выход" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="1.0" />
+         </padding>
+      </VBox>
+      <ScrollPane fx:id="mainScroll" fitToWidth="true" hbarPolicy="NEVER" layoutX="181.0" layoutY="56.0" prefHeight="334.0" prefWidth="492.0" style="-fx-background-color: #080021;" stylesheets="@styleScrollPane.css" vmax="1.25" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0">
+         <content>
+          <AnchorPane fx:id="mainPaneScroll" minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="579.0" style="-fx-background-color: #080021;" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="mainLabel" layoutX="188.0" layoutY="21.0" text="Главная" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <ScrollPane fitToHeight="true" hmax="1.5" layoutX="502.0" layoutY="-375.0" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="194.0" prefWidth="470.0" style="-fx-background-color: #080021;" stylesheets="@styleH.css" vbarPolicy="NEVER" vmax="0.0" AnchorPane.bottomAnchor="735.0" AnchorPane.leftAnchor="502.0" AnchorPane.rightAnchor="-496.4" AnchorPane.topAnchor="-375.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </ScrollPane>
+      <AnchorPane fx:id="searchMenu" layoutX="172.0" layoutY="57.0" prefHeight="346.0" prefWidth="501.0" style="-fx-background-color: #080021;" visible="false">
+         <children>
+            <TextField fx:id="search" layoutX="17.0" layoutY="13.0" prefHeight="34.0" prefWidth="471.0" promptText="Поиск" stylesheets="@fontstyle.css" />
+            <ListView fx:id="searchList" layoutX="17.0" layoutY="47.0" prefHeight="286.0" prefWidth="471.0" stylesheets="@fontstyle.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="userCollection" layoutX="172.0" layoutY="57.0" prefHeight="346.0" prefWidth="501.0" style="-fx-background-color: #080021;" visible="false">
+         <children>
+            <ListView fx:id="userPlayList" layoutX="17.0" layoutY="21.0" prefHeight="308.0" prefWidth="457.0" style="-fx-background-color: #080021;" stylesheets="@fontstyle.css" />
+         </children></AnchorPane>
+      <AnchorPane blendMode="SRC_ATOP" cache="true" layoutX="-5.0" layoutY="346.0" prefHeight="54.0" prefWidth="679.0" style="-fx-background-color: #000000;">
+         <children>
+            <Slider fx:id="volumeSlider" layoutX="545.0" layoutY="14.0" max="100" min="0" prefHeight="0.0" prefWidth="78.0" value="50" />
+            <Slider fx:id="timeSlider" layoutX="276.0" layoutY="14.0" prefHeight="14.0" prefWidth="224.0" />
+            <Label fx:id="nameTrackOnPane" depthTest="DISABLE" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="119.0" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Symbol" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="currTime" layoutX="272.0" layoutY="28.0" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeTrack" layoutX="480.0" layoutY="28.0" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="previousTrack" fitHeight="26.0" fitWidth="34.0" layoutX="141.0" layoutY="10.0" onMouseClicked="#prevMusic" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/prev.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="playTrack" fitHeight="26.0" fitWidth="34.0" layoutX="177.0" layoutY="10.0" onMouseClicked="#playMusic" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/play.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="nextTrack" fitHeight="26.0" fitWidth="34.0" layoutX="217.0" layoutY="10.0" onMouseClicked="#nextMusic" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/next.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="volume1" fitHeight="26.0" fitWidth="34.0" layoutX="519.0" layoutY="10.0" onMouseClicked="#SetVolume" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/vol.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="addTrack" fitHeight="26.0" fitWidth="34.0" layoutX="632.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/add.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="stopTrack" fitHeight="26.0" fitWidth="100.0" layoutX="177.0" layoutY="10.0" onMouseClicked="#playMusic" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@icons/stop.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="volume2" fitHeight="17.0" fitWidth="24.0" layoutX="523.0" layoutY="15.0" onMouseClicked="#AddVolume" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@icons/zerVol.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
